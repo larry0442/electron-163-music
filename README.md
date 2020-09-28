@@ -168,7 +168,7 @@ app.on('activate', function () {
     }
    ```
     3. 同样是在 package.json 中添加以下数据
-   ```json
+   ```js
     "build": {
     // 软件包名
     "appId": "com.xxx.xxx",

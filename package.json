@@ -16,6 +16,7 @@
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
+  "homepage": ".",
   "main": "main.js",
   "author": "web",
   "description": "test",
@@ -23,6 +24,7 @@
     "start": "cross-env BROWSER=none react-app-rewired start",
     "start-electron": "cross-env NODE_ENV=development electron .",
     "start-electron-prod": "electron .",
+    "build-electron": "electron-builder",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test"
   },
@@ -46,6 +48,37 @@
     "cross-env": "^7.0.2",
     "customize-cra": "^1.0.0",
     "electron": "^10.1.2",
+    "electron-builder": "^22.8.1",
     "react-app-rewired": "^2.1.6"
+  },
+  "build": {
+    "appId": "com.test.web",
+    "productName": "web123",
+    "copyright": "Copyright © 2020",
+    "extends": null,
+    "directories": {
+      "output": "build-electron"
+    },
+    "files": [
+      "./build/**/*",
+      "./main.js",
+      "./package.json"
+    ],
+    "win": { 
+      "icon": "./favicon_256.ico",
+      "artifactName": "${productName}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true,
+      "installerIcon": "./favicon_256.ico", 
+      "uninstallerIcon": "./favicon_256.ico",
+      "installerHeaderIcon": "./build/icons/aaa.ico",
+      "shortcutName": "工具集"
+    }
   }
 }

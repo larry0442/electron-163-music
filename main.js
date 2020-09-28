@@ -19,7 +19,7 @@ const createWindow = ()=>{
   const startUrl = (
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : path(__dirname, '/build/index.html')
+      : path.join(__dirname, '/build/index.html')
   )
   mainWindow.loadURL(startUrl)
 

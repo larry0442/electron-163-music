@@ -58,7 +58,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ```js
   npm install -D react-app-rewired, cross-env, customize-cra
 ```
-安装之后 修改 package.json 之中的 scripts, 将 react-scripts 改成 react-app-ewwired，修改的最终成果
+安装之后 修改 package.json 之中的 scripts, 将 react-scripts 改成 react-app-rewired，修改的最终成果
 
 ```json
   "scripts": {
@@ -108,7 +108,7 @@ const createWindow = ()=>{
     2. 生产环境： 指向打包之后的 react build 的index.html
   */
   const startUrl = (
-    process.env.NODE_ENV === 'devehttp://lopment'
+    process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
       : path.join(__dirname, '/build/index.html')
   )
